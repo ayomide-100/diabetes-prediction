@@ -1,10 +1,10 @@
-# 🩺 Diabetes Prediction System using Machine Learning
+# Diabetes Prediction System using Machine Learning
 
 A machine learning project that classifies and predicts whether a patient is diabetic or non-diabetic based on diagnostic measurements. The project implements comprehensive Exploratory Data Analysis (EDA), feature preprocessing, and compares **Support Vector Machines (SVM)** and **Logistic Regression** classifiers.
 
 ---
 
-## 📌 Table of Contents
+##  Table of Contents
 - [Project Overview](#-project-overview)
 - [Dataset Summary](#-dataset-summary)
 - [Project Structure](#-project-structure)
@@ -17,7 +17,7 @@ A machine learning project that classifies and predicts whether a patient is dia
 
 ---
 
-## 🔬 Project Overview
+##  Project Overview
 Diabetes mellitus is a chronic disease requiring early detection to prevent long-term metabolic complications. This project uses clinical and diagnostic variables to build classification models:
 - **Linear Support Vector Classifier (`SVC(kernel='linear')`)**
 - **Logistic Regression Classifier**
@@ -26,7 +26,7 @@ Both models are trained and evaluated with standard scaling and stratified valid
 
 ---
 
-## 📊 Dataset Summary
+##  Dataset Summary
 The project utilizes the **Pima Indians Diabetes Dataset** located in [`data/diabetes.csv`](data/diabetes.csv):
 - **Total Records:** 768 instances
 - **Total Features:** 8 numerical predictor features + 1 binary target (`Outcome`)
@@ -49,7 +49,7 @@ The project utilizes the **Pima Indians Diabetes Dataset** located in [`data/dia
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```bash
 diabetes-prediction-svm/
@@ -71,7 +71,7 @@ diabetes-prediction-svm/
 
 ---
 
-## 🔍 Exploratory Data Analysis (EDA)
+##  Exploratory Data Analysis (EDA)
 Modularized within [`src/eda_functions.py`](src/eda_functions.py), the EDA workflow covers:
 1. **Missing & Zero Value Detection:** Identifies physiologically impossible zeros in features like `Insulin` (48.7%), `SkinThickness` (29.6%), `BloodPressure` (4.7%), `BMI` (1.4%), and `Glucose` (0.7%).
 2. **Distribution & Outlier Analysis:** Boxplots and IQR analysis across all 8 features.
@@ -80,7 +80,7 @@ Modularized within [`src/eda_functions.py`](src/eda_functions.py), the EDA workf
 
 ---
 
-## ⚙️ Model Training & Evaluation
+##  Model Training & Evaluation
 
 ### 1. Data Preprocessing
 - **Feature Scaling:** Applied `StandardScaler` to normalize features with vastly different scales (e.g., `Insulin` vs. `DiabetesPedigreeFunction`).
@@ -100,7 +100,7 @@ Modularized within [`src/eda_functions.py`](src/eda_functions.py), the EDA workf
 
 ---
 
-## 💾 Saved Models
+##  Saved Models
 Trained estimators and preprocessing pipelines are saved in the `models/` directory using `joblib`:
 - `models/svm_model.joblib`: Trained Support Vector Classifier
 - `models/logistic_regression_model.joblib`: Trained Logistic Regression Classifier
@@ -126,7 +126,7 @@ print("Diabetic" if prediction[0] == 1 else "Non-Diabetic")
 
 ---
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 1. **Clone the repository:**
    ```bash
@@ -150,7 +150,7 @@ print("Diabetic" if prediction[0] == 1 else "Non-Diabetic")
 
 ---
 
-## 💻 How to Use & Run
+##  How to Use & Run
 
 1. Launch Jupyter Notebook or VS Code Jupyter extension:
    ```bash
@@ -166,7 +166,7 @@ print("Diabetic" if prediction[0] == 1 else "Non-Diabetic")
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 - **Missing Value Imputation:** Implement KNN or Iterative Imputer for zero values in `Insulin` and `SkinThickness`.
 - **Non-Linear Kernels & Hyperparameter Tuning:** Evaluate Radial Basis Function (`rbf`) and Polynomial SVM kernels with `GridSearchCV`.
 - **Ensemble Techniques:** Benchmark against Random Forests, Gradient Boosting, and XGBoost.
